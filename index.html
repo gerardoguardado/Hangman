@@ -1,0 +1,969 @@
+<html>
+<head>
+	<style>
+		#box1{
+			position:absolute;
+			width:100px;
+			height:40px;
+			left:50px;
+			top:50px;
+			border: 1px solid red;
+		}
+		
+		#box2{
+			position:absolute;
+			width:100px;
+			height:40px;
+			left:50px;
+			top:150px;
+			border: 1px solid red;
+		}
+		
+		#box3{
+			position: absolute;
+			
+			left:200px;
+			top: 50px;
+			
+		}
+		
+		#box4{
+			position: absolute;
+			
+			left:224px;
+			top: 100px;
+			
+		}
+
+		#box5{
+			position: absolute;
+
+			left:175px;
+			top:100px;
+		}
+
+		#box6{
+			position: absolute;
+
+			left:225px;
+			top:100px;
+		}
+
+		#box7{
+			position: absolute;
+
+			left:175px;
+			top:202px;
+		}
+
+		#box8{
+			position: absolute;
+
+			left:224px;
+			top:202px;
+		}
+
+		#box9{
+			position: absolute;
+
+			left:224px;
+			top:7px;
+		}
+
+
+
+
+
+		#letter1{
+			position: absolute;
+			
+
+			left: 100px;
+			top: 350px;
+		}
+		#letter2{
+			position: absolute;
+			
+
+			left: 130px;
+			top: 350px;
+		}
+
+		#letter3{
+			position: absolute;
+			
+
+			left: 160px;
+			top: 350px;
+
+		}
+
+		#letter4{
+			position: absolute;
+			
+
+			left: 190px;
+			top: 350px;
+		}
+		#letter5{
+			position: absolute;
+			
+
+			left: 220px;
+			top: 350px;
+		}
+
+		#letter6{
+			position: absolute;
+
+
+			left: 250px;
+			top: 350px;
+		}
+
+		#alphabet{
+			position: absolute;
+
+			width:400px;
+			height:50px;
+			
+			left:50px;
+			top: 400px;
+		}
+
+		#refresh{
+			position: absolute;
+
+			left: 325px;
+			top: 350px;
+		}
+		
+		button{
+			width:25px;
+		}
+		
+		.hidden{
+			display:none;
+		}
+
+		img{
+			margin-top:12px;
+		}
+		
+	</style>
+		
+	<script>
+		var count = 0;
+		var correct = 0;
+		
+		function test(){
+			count = count + 1;
+			
+			var placeholder = document.getElementById("counter");
+			placeholder.innerHTML = count;
+		}
+		
+		function hide(){
+			document.getElementById("box3").classList.add('hidden');
+		}
+		
+		function show(){
+			document.getElementById("box3").classList.remove('hidden');
+		}
+
+		function hide(){
+			document.getElementById("box4").classList.add('hidden');
+		}
+		
+		function show(){
+			document.getElementById("box4").classList.remove('hidden');
+		}
+
+		function hide(){
+			document.getElementById("box5").classList.add('hidden');
+		}
+		
+		function show(){
+			document.getElementById("box5").classList.remove('hidden');
+		}
+
+		function hide(){
+			document.getElementById("box6").classList.add('hidden');
+		}
+		
+		function show(){
+			document.getElementById("box6").classList.remove('hidden');
+		}
+
+		function hide(){
+			document.getElementById("box7").classList.add('hidden');
+		}
+		
+		function show(){
+			document.getElementById("box7").classList.remove('hidden');
+		}
+
+		function hide(){
+			document.getElementById("box8").classList.add('hidden');
+		}
+		
+		function show(){
+			document.getElementById("box8").classList.remove('hidden');
+		}
+
+
+		function clickM(){
+			document.getElementById("letter1").innerHTML = "M";
+			correct = correct + 1;
+
+			if (correct == 6){
+				alert("Congrats, you've won!")
+			}
+		}
+
+		function clickE(){
+			document.getElementById("letter2").innerHTML = "E";
+			correct = correct + 1;
+			document.getElementById("letter5").innerHTML = "E";
+			correct = correct + 1;
+
+			if (correct == 6){
+				alert("Congrats, you've won!")
+			}
+		}
+
+		function clickR(){
+			document.getElementById("letter3").innerHTML = "R";
+			correct = correct + 1;
+
+			if (correct == 6){
+				alert("Congrats, you've won!")
+			}
+		}
+
+		function clickC(){
+			document.getElementById("letter4").innerHTML = "C";
+			correct = correct + 1;
+
+			if (correct == 6){
+				alert("Congrats, you've won!")
+			}
+		}
+
+		function clickD(){
+			document.getElementById("letter6").innerHTML = "D";
+			correct = correct + 1;
+
+			if (correct == 6){
+				alert("Congrats, you've won!")
+			}
+		}
+
+
+
+		function clickA(){
+			if (count == 0){
+				document.getElementById("box3").classList.remove('hidden');
+			}
+			else if (count == 1){
+				document.getElementById("box4").classList.remove('hidden');
+			}
+			else if (count == 2){
+				document.getElementById("box5").classList.remove('hidden');
+			}
+			else if (count == 3){
+				document.getElementById("box6").classList.remove('hidden');
+			}
+			else if (count == 4){
+				document.getElementById("box7").classList.remove('hidden');
+			}
+			else if (count == 5){
+				document.getElementById("box8").classList.remove('hidden');
+			}
+
+			count = count + 1;
+			
+			if (count == 6){
+				alert("You Lost :(");
+			}
+
+		}
+
+		function clickB(){
+			if (count == 0){
+				document.getElementById("box3").classList.remove('hidden');
+			}
+			else if (count == 1){
+				document.getElementById("box4").classList.remove('hidden');
+			}
+			else if (count == 2){
+				document.getElementById("box5").classList.remove('hidden');
+			}
+			else if (count == 3){
+				document.getElementById("box6").classList.remove('hidden');
+			}
+			else if (count == 4){
+				document.getElementById("box7").classList.remove('hidden');
+			}
+			else if (count == 5){
+				document.getElementById("box8").classList.remove('hidden');
+			}
+
+			count = count + 1;
+
+			if (count == 6){
+				alert("You Lost :(");
+			}
+
+			
+		}
+
+		function clickF(){
+			if (count == 0){
+				document.getElementById("box3").classList.remove('hidden');
+			}
+			else if (count == 1){
+				document.getElementById("box4").classList.remove('hidden');
+			}
+			else if (count == 2){
+				document.getElementById("box5").classList.remove('hidden');
+			}
+			else if (count == 3){
+				document.getElementById("box6").classList.remove('hidden');
+			}
+			else if (count == 4){
+				document.getElementById("box7").classList.remove('hidden');
+			}
+			else if (count == 5){
+				document.getElementById("box8").classList.remove('hidden');
+			}
+
+			count = count + 1;
+
+			if (count == 6){
+				alert("You Lost :(");
+			}
+
+			
+		}
+
+		function clickG(){
+			if (count == 0){
+				document.getElementById("box3").classList.remove('hidden');
+			}
+			else if (count == 1){
+				document.getElementById("box4").classList.remove('hidden');
+			}
+			else if (count == 2){
+				document.getElementById("box5").classList.remove('hidden');
+			}
+			else if (count == 3){
+				document.getElementById("box6").classList.remove('hidden');
+			}
+			else if (count == 4){
+				document.getElementById("box7").classList.remove('hidden');
+			}
+			else if (count == 5){
+				document.getElementById("box8").classList.remove('hidden');
+			}
+
+			count = count + 1;
+
+			if (count == 6){
+				alert("You Lost :(");
+			}
+
+			
+		}
+
+		function clickH(){
+			if (count == 0){
+				document.getElementById("box3").classList.remove('hidden');
+			}
+			else if (count == 1){
+				document.getElementById("box4").classList.remove('hidden');
+			}
+			else if (count == 2){
+				document.getElementById("box5").classList.remove('hidden');
+			}
+			else if (count == 3){
+				document.getElementById("box6").classList.remove('hidden');
+			}
+			else if (count == 4){
+				document.getElementById("box7").classList.remove('hidden');
+			}
+			else if (count == 5){
+				document.getElementById("box8").classList.remove('hidden');
+			}
+
+			count = count + 1;
+
+			if (count == 6){
+				alert("You Lost :(");
+			}
+
+			
+		}
+
+		function clickI(){
+			if (count == 0){
+				document.getElementById("box3").classList.remove('hidden');
+			}
+			else if (count == 1){
+				document.getElementById("box4").classList.remove('hidden');
+			}
+			else if (count == 2){
+				document.getElementById("box5").classList.remove('hidden');
+			}
+			else if (count == 3){
+				document.getElementById("box6").classList.remove('hidden');
+			}
+			else if (count == 4){
+				document.getElementById("box7").classList.remove('hidden');
+			}
+			else if (count == 5){
+				document.getElementById("box8").classList.remove('hidden');
+			}
+
+			count = count + 1;
+
+			if (count == 6){
+				alert("You Lost :(");
+			}
+
+			
+		}
+
+		function clickJ(){
+			if (count == 0){
+				document.getElementById("box3").classList.remove('hidden');
+			}
+			else if (count == 1){
+				document.getElementById("box4").classList.remove('hidden');
+			}
+			else if (count == 2){
+				document.getElementById("box5").classList.remove('hidden');
+			}
+			else if (count == 3){
+				document.getElementById("box6").classList.remove('hidden');
+			}
+			else if (count == 4){
+				document.getElementById("box7").classList.remove('hidden');
+			}
+			else if (count == 5){
+				document.getElementById("box8").classList.remove('hidden');
+			}
+
+			count = count + 1;
+
+			if (count == 6){
+				alert("You Lost :(");
+			}
+
+			
+		}
+
+		function clickK(){
+			if (count == 0){
+				document.getElementById("box3").classList.remove('hidden');
+			}
+			else if (count == 1){
+				document.getElementById("box4").classList.remove('hidden');
+			}
+			else if (count == 2){
+				document.getElementById("box5").classList.remove('hidden');
+			}
+			else if (count == 3){
+				document.getElementById("box6").classList.remove('hidden');
+			}
+			else if (count == 4){
+				document.getElementById("box7").classList.remove('hidden');
+			}
+			else if (count == 5){
+				document.getElementById("box8").classList.remove('hidden');
+			}
+
+			count = count + 1;
+
+			if (count == 6){
+				alert("You Lost :(");
+			}
+
+			
+		}
+
+		function clickL(){
+			if (count == 0){
+				document.getElementById("box3").classList.remove('hidden');
+			}
+			else if (count == 1){
+				document.getElementById("box4").classList.remove('hidden');
+			}
+			else if (count == 2){
+				document.getElementById("box5").classList.remove('hidden');
+			}
+			else if (count == 3){
+				document.getElementById("box6").classList.remove('hidden');
+			}
+			else if (count == 4){
+				document.getElementById("box7").classList.remove('hidden');
+			}
+			else if (count == 5){
+				document.getElementById("box8").classList.remove('hidden');
+			}
+
+			count = count + 1;
+
+			if (count == 6){
+				alert("You Lost :(");
+			}
+
+			
+		}
+
+		function clickN(){
+			if (count == 0){
+				document.getElementById("box3").classList.remove('hidden');
+			}
+			else if (count == 1){
+				document.getElementById("box4").classList.remove('hidden');
+			}
+			else if (count == 2){
+				document.getElementById("box5").classList.remove('hidden');
+			}
+			else if (count == 3){
+				document.getElementById("box6").classList.remove('hidden');
+			}
+			else if (count == 4){
+				document.getElementById("box7").classList.remove('hidden');
+			}
+			else if (count == 5){
+				document.getElementById("box8").classList.remove('hidden');
+			}
+
+			count = count + 1;
+
+			if (count == 6){
+				alert("You Lost :(");
+			}
+
+			
+		}
+
+		function clickO(){
+			if (count == 0){
+				document.getElementById("box3").classList.remove('hidden');
+			}
+			else if (count == 1){
+				document.getElementById("box4").classList.remove('hidden');
+			}
+			else if (count == 2){
+				document.getElementById("box5").classList.remove('hidden');
+			}
+			else if (count == 3){
+				document.getElementById("box6").classList.remove('hidden');
+			}
+			else if (count == 4){
+				document.getElementById("box7").classList.remove('hidden');
+			}
+			else if (count == 5){
+				document.getElementById("box8").classList.remove('hidden');
+			}
+
+			count = count + 1;
+
+			if (count == 6){
+				alert("You Lost :(");
+			}
+
+			
+		}
+
+		function clickP(){
+			if (count == 0){
+				document.getElementById("box3").classList.remove('hidden');
+			}
+			else if (count == 1){
+				document.getElementById("box4").classList.remove('hidden');
+			}
+			else if (count == 2){
+				document.getElementById("box5").classList.remove('hidden');
+			}
+			else if (count == 3){
+				document.getElementById("box6").classList.remove('hidden');
+			}
+			else if (count == 4){
+				document.getElementById("box7").classList.remove('hidden');
+			}
+			else if (count == 5){
+				document.getElementById("box8").classList.remove('hidden');
+			}
+
+			count = count + 1;
+
+			if (count == 6){
+				alert("You Lost :(");
+			}
+
+			
+		}
+
+		function clickQ(){
+			if (count == 0){
+				document.getElementById("box3").classList.remove('hidden');
+			}
+			else if (count == 1){
+				document.getElementById("box4").classList.remove('hidden');
+			}
+			else if (count == 2){
+				document.getElementById("box5").classList.remove('hidden');
+			}
+			else if (count == 3){
+				document.getElementById("box6").classList.remove('hidden');
+			}
+			else if (count == 4){
+				document.getElementById("box7").classList.remove('hidden');
+			}
+			else if (count == 5){
+				document.getElementById("box8").classList.remove('hidden');
+			}
+
+
+			count = count + 1;
+
+			if (count == 6){
+				alert("You Lost :(");
+			}
+
+			
+		}
+
+		function clickS(){
+			if (count == 0){
+				document.getElementById("box3").classList.remove('hidden');
+			}
+			else if (count == 1){
+				document.getElementById("box4").classList.remove('hidden');
+			}
+			else if (count == 2){
+				document.getElementById("box5").classList.remove('hidden');
+			}
+			else if (count == 3){
+				document.getElementById("box6").classList.remove('hidden');
+			}
+			else if (count == 4){
+				document.getElementById("box7").classList.remove('hidden');
+			}
+			else if (count == 5){
+				document.getElementById("box8").classList.remove('hidden');
+			}
+
+			count = count + 1;
+
+			if (count == 6){
+				alert("You Lost :(");
+			}
+
+			
+		}
+
+		function clickT(){
+			if (count == 0){
+				document.getElementById("box3").classList.remove('hidden');
+			}
+			else if (count == 1){
+				document.getElementById("box4").classList.remove('hidden');
+			}
+			else if (count == 2){
+				document.getElementById("box5").classList.remove('hidden');
+			}
+			else if (count == 3){
+				document.getElementById("box6").classList.remove('hidden');
+			}
+			else if (count == 4){
+				document.getElementById("box7").classList.remove('hidden');
+			}
+			else if (count == 5){
+				document.getElementById("box8").classList.remove('hidden');
+			}
+
+			count = count + 1;
+
+			if (count == 6){
+				alert("You Lost :(");
+			}
+
+			
+		}
+
+		function clickU(){
+			if (count == 0){
+				document.getElementById("box3").classList.remove('hidden');
+			}
+			else if (count == 1){
+				document.getElementById("box4").classList.remove('hidden');
+			}
+			else if (count == 2){
+				document.getElementById("box5").classList.remove('hidden');
+			}
+			else if (count == 3){
+				document.getElementById("box6").classList.remove('hidden');
+			}
+			else if (count == 4){
+				document.getElementById("box7").classList.remove('hidden');
+			}
+			else if (count == 5){
+				document.getElementById("box8").classList.remove('hidden');
+			}
+
+			count = count + 1;
+
+			if (count == 6){
+				alert("You Lost :(");
+			}
+
+			
+		}
+
+		function clickV(){
+			if (count == 0){
+				document.getElementById("box3").classList.remove('hidden');
+			}
+			else if (count == 1){
+				document.getElementById("box4").classList.remove('hidden');
+			}
+			else if (count == 2){
+				document.getElementById("box5").classList.remove('hidden');
+			}
+			else if (count == 3){
+				document.getElementById("box6").classList.remove('hidden');
+			}
+			else if (count == 4){
+				document.getElementById("box7").classList.remove('hidden');
+			}
+			else if (count == 5){
+				document.getElementById("box8").classList.remove('hidden');
+			}
+
+			count = count + 1;
+
+			if (count == 6){
+				alert("You Lost :(");
+			}
+
+			
+		}
+
+		function clickW(){
+			if (count == 0){
+				document.getElementById("box3").classList.remove('hidden');
+			}
+			else if (count == 1){
+				document.getElementById("box4").classList.remove('hidden');
+			}
+			else if (count == 2){
+				document.getElementById("box5").classList.remove('hidden');
+			}
+			else if (count == 3){
+				document.getElementById("box6").classList.remove('hidden');
+			}
+			else if (count == 4){
+				document.getElementById("box7").classList.remove('hidden');
+			}
+			else if (count == 5){
+				document.getElementById("box8").classList.remove('hidden');
+			}
+
+			count = count + 1;
+
+			if (count == 6){
+				alert("You Lost :(");
+			}
+
+			
+		}
+
+		function clickX(){
+			if (count == 0){
+				document.getElementById("box3").classList.remove('hidden');
+			}
+			else if (count == 1){
+				document.getElementById("box4").classList.remove('hidden');
+			}
+			else if (count == 2){
+				document.getElementById("box5").classList.remove('hidden');
+			}
+			else if (count == 3){
+				document.getElementById("box6").classList.remove('hidden');
+			}
+			else if (count == 4){
+				document.getElementById("box7").classList.remove('hidden');
+			}
+			else if (count == 5){
+				document.getElementById("box8").classList.remove('hidden');
+			}
+
+			count = count + 1;
+
+			if (count == 6){
+				alert("You Lost!");
+			}
+
+			
+		}
+
+		function clickY(){
+			if (count == 0){
+				document.getElementById("box3").classList.remove('hidden');
+			}
+			else if (count == 1){
+				document.getElementById("box4").classList.remove('hidden');
+			}
+			else if (count == 2){
+				document.getElementById("box5").classList.remove('hidden');
+			}
+			else if (count == 3){
+				document.getElementById("box6").classList.remove('hidden');
+			}
+			else if (count == 4){
+				document.getElementById("box7").classList.remove('hidden');
+			}
+			else if (count == 5){
+				document.getElementById("box8").classList.remove('hidden');
+			}
+
+			count = count + 1;
+
+			if (count == 6){
+				alert("You Lost :(");
+			}
+
+			
+		}
+
+		function clickZ(){
+			if (count == 0){
+				document.getElementById("box3").classList.remove('hidden');
+			}
+			else if (count == 1){
+				document.getElementById("box4").classList.remove('hidden');
+			}
+			else if (count == 2){
+				document.getElementById("box5").classList.remove('hidden');
+			}
+			else if (count == 3){
+				document.getElementById("box6").classList.remove('hidden');
+			}
+			else if (count == 4){
+				document.getElementById("box7").classList.remove('hidden');
+			}
+			else if (count == 5){
+				document.getElementById("box8").classList.remove('hidden');
+			}
+
+			count = count + 1;
+
+			if (count == 6){
+				alert("You Lost :(");
+			}
+
+			
+		}
+	</script>
+</head>
+
+
+<body>
+
+
+	<div id="box3" class="hidden">
+		<img src="Head.png" width="50px">
+	</div>
+
+	<div id="box4" class="hidden">
+		<img src="Body.png" width="1px">
+	</div>
+
+	<div id="box5" class="hidden">
+		<img src="LeftArm.png" width="50px">
+	</div>
+
+	<div id="box6" class="hidden">
+		<img src="RightArm.png" width="50px">
+	</div>
+
+	<div id="box7" class="hidden">
+		<img src="LeftLeg.png" width="50px">
+	</div>
+
+	<div id="box8" class="hidden">
+		<img src="RightLeg.png" width="50px">
+	</div>
+
+
+	<div id="box9">
+		<img src="Hang.png" width ="175px">
+	</div>
+
+
+	
+	<div id="letter1">
+		<img src="line.png" length="40px" width="25px">
+	</div>
+
+	<div id="letter2">
+		<img src="line.png" length="40px" width="25px">
+	</div>
+
+	<div id="letter3">
+		<img src="line.png" length="40px" width="25px">
+	</div>
+
+	<div id="letter4">
+		<img src="line.png" length="40px" width="25px">
+	</div>
+						
+	<div id="letter5">
+		<img src="line.png" length="40px" width="25px">
+	</div>
+
+	<div id="letter6">
+		<img src="line.png" length="40px" width="25px">
+	</div>
+
+	<div id="alphabet">
+	<button onclick="clickA()">A</button>
+	<button onclick="clickB()">B</button>
+	<button onclick="clickC()">C</button>
+	<button onclick="clickD()">D</button>
+	<button onclick="clickE()">E</button>
+	<button onclick="clickF()">F</button>
+	<button onclick="clickG()">G</button>
+	<button onclick="clickH()">H</button>
+	<button onclick="clickI()">I</button>
+	<button onclick="clickJ()">J</button>
+	<button onclick="clickK()">K</button>
+	<button onclick="clickL()">L</button>
+	<button onclick="clickM()">M</button>
+	<button onclick="clickN()">N</button>
+	<button onclick="clickO()">O</button>
+	<button onclick="clickP()">P</button>
+	<button onclick="clickQ()">Q</button>
+	<button onclick="clickR()">R</button>
+	<button onclick="clickS()">S</button>
+	<button onclick="clickT()">T</button>
+	<button onclick="clickU()">U</button>
+	<button onclick="clickV()">V</button>
+	<button onclick="clickW()">W</button>
+	<button onclick="clickX()">X</button>
+	<button onclick="clickY()">Y</button>
+	<button onclick="clickZ()">Z</button>
+	</div>
+
+<div id="refresh">
+<input name="refresh" type="button" value="Reset" onClick="location.reload()">
+</div>
+
+</body>
+
+</html>
